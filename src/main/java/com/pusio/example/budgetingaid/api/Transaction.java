@@ -1,4 +1,4 @@
-package com.pusio.example.budgetingaid.money;
+package com.pusio.example.budgetingaid.api;
 
 
 import javax.validation.constraints.NotEmpty;

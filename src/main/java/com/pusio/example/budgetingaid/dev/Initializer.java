@@ -4,8 +4,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-import com.pusio.example.budgetingaid.money.Recharge;
-import com.pusio.example.budgetingaid.money.TransactionService;
+import com.pusio.example.budgetingaid.api.Recharge;
+import com.pusio.example.budgetingaid.api.TransactionService;
 import com.pusio.example.budgetingaid.register.Register;
 import com.pusio.example.budgetingaid.register.RegisterRepository;
 import com.pusio.example.budgetingaid.registerbalance.RegisterBalance;
