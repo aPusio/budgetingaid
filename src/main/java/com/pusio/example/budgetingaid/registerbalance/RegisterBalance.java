@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-import com.pusio.example.budgetingaid.money.AmountOfMoney;
 import com.pusio.example.budgetingaid.register.Register;
 
 import lombok.Getter;
@@ -23,7 +22,7 @@ public class RegisterBalance {
 	@GeneratedValue
 	private UUID id;
 
-	private AmountOfMoney amount;
+	private Long amount;
 
 	@OneToOne(mappedBy = "balance", optional = false)
 	private Register register;

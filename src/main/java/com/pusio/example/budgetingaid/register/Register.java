@@ -1,10 +1,7 @@
 package com.pusio.example.budgetingaid.register;
 
-import java.util.UUID;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -25,9 +22,6 @@ import lombok.Setter;
 @Table(name = "USER_REGISTER")
 public class Register {
 	@Id
-	@GeneratedValue
-	private UUID id;
-
 	@NotEmpty
 	private String name;
 

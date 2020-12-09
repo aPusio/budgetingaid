@@ -1,9 +1,9 @@
 package com.pusio.example.budgetingaid.money;
 
 
-import java.util.UUID;
+import javax.validation.constraints.NotEmpty;
 
-import com.pusio.example.budgetingaid.register.Register;
+import com.sun.istack.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,8 +11,10 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class Transaction {
-	private UUID transactionId;
-	private Register source;
-	private Register target;
-	private AmountOfMoney amount;
+	@NotEmpty
+	private String sourceRegisterName;
+	@NotEmpty
+	private String targetRegisterName;
+	@NotNull
+	private Long amount;
 }
