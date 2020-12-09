@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
+import com.pusio.example.budgetingaid.money.Recharge;
 import com.pusio.example.budgetingaid.money.TransactionService;
 import com.pusio.example.budgetingaid.register.Register;
 import com.pusio.example.budgetingaid.register.RegisterRepository;
@@ -26,7 +27,11 @@ public class Initializer implements CommandLineRunner {
 		createRegister("Insurance policy", 0L);
 		createRegister("Food expenses", 0L);
 
-		transactionService.transferMoney(wallet, savings, 10L);
+//		transactionService.exchange(wallet, savings, 10L);
+		final Recharge recharge = new Recharge();
+		recharge.setRegisterName(wallet.getName());
+		recharge.setAmount(20L);
+		transactionService.recharge(recharge);
 	}
 
 	private Register createRegister(final String name, final Long amount) {
