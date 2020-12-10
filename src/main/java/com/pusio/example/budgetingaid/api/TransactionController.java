@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.pusio.example.budgetingaid.api.domain.Balance;
+import com.pusio.example.budgetingaid.api.domain.Recharge;
+import com.pusio.example.budgetingaid.api.domain.Transaction;
+import com.pusio.example.budgetingaid.transaction.TransactionService;
+
 import lombok.RequiredArgsConstructor;
 
 @RestController

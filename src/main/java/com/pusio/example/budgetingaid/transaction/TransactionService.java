@@ -1,4 +1,4 @@
-package com.pusio.example.budgetingaid.api;
+package com.pusio.example.budgetingaid.transaction;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -8,6 +8,9 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.pusio.example.budgetingaid.api.domain.Balance;
+import com.pusio.example.budgetingaid.api.domain.Recharge;
+import com.pusio.example.budgetingaid.api.domain.Transaction;
 import com.pusio.example.budgetingaid.register.Register;
 import com.pusio.example.budgetingaid.register.RegisterService;
 import com.pusio.example.budgetingaid.registerbalance.RegisterBalance;

@@ -1,21 +1,21 @@
-package com.pusio.example.budgetingaid.api;
+package com.pusio.example.budgetingaid.api.domain;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 import com.sun.istack.NotNull;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
-@Setter
+@AllArgsConstructor
 public class Recharge {
 
 	@NotEmpty
-	private String registerName;
+	private final String registerName;
 
 	@Size(min = 1)
 	@NotNull
-	private Long amount;
+	private final Long amount;
 }

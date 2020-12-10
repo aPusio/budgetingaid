@@ -1,4 +1,4 @@
-package com.pusio.example.budgetingaid.api;
+package com.pusio.example.budgetingaid.api.domain;
 
 
 import javax.validation.constraints.NotEmpty;
@@ -12,9 +12,9 @@ import lombok.Getter;
 @Getter
 public class Transaction {
 	@NotEmpty
-	private String sourceRegisterName;
+	private final String sourceRegisterName;
 	@NotEmpty
-	private String targetRegisterName;
+	private final String targetRegisterName;
 	@NotNull
-	private Long amount;
+	private final Long amount;
 }
